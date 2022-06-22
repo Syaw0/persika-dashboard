@@ -12,7 +12,7 @@ function Navbar(){
     const navDisplay = useStore(state=>state.isShowNav)
     const setNavDisplay = useStore(state=>state.setIsShowNav)
     return(
-        <Flex   position={"fixed"} dir={"column"} justify={"center"} align={"start"} css={{
+        <Flex id="Nav_con"   position={"fixed"} dir={"column"} justify={"center"} align={"start"} css={{
             "height":"100%"  , "left":"0" , "width":"220px" , zIndex:"$top" , backgroundColor:"$primary",
 
             "& svg[id=close_nav]":{

@@ -9,7 +9,7 @@ import DashTable from "./Dash_table"
 import {tableLastTiket , tableLastPurchase , tableTopProducts , tableTopCustomers} from "../../fakeData"
 function Dashboard (){
     return(
-        <Flex dir={"column"} justify="start" align={"center"} css={{
+        <Flex id="dashboard_con" dir={"column"} justify="start" align={"center"} css={{
             width:"100%",
             
         }}>
