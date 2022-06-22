@@ -7,6 +7,9 @@ const globalStyle = globalCss({
         boxSizing:"border-box",
         transition:"$coAndBg",
     },
+    "::selection":{
+        backgroundColor:"$onBg100"
+    },
     body:{
         minHeight:"100vh",
         backgroundColor:"$bg"
@@ -20,7 +23,8 @@ const globalStyle = globalCss({
         backgroundColor:"$bg",
         flex_c:"",
         jfs_ac:"",
-        minHeight:"100vh"
+        minHeight:"100vh",
+        position:"relative"
     }
 })
 

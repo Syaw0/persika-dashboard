@@ -13,10 +13,12 @@ export const {
             "primary":"#3E5AA9",
             "primary100":"rgba(62,90,169,0.1)",
             "onPrimary":"#FFFFFF",
-            "onPrimary500":"rgba(0,0,0,0.5)",
+            "onPrimary500":"rgba(255,255,255,0.5)",
+            "onPrimary300":"rgba(255,255,255,0.3)",
             "primaryCon":"#DAE1FF",
             "onPrimaryCon":"#00164D",
             "onPrimaryCon300":"rgba(0,2,77,0.3)",
+            "onPrimaryCon100":"rgba(0,2,77,0.1)",
             "error":"#BA1B1B",
             "onError":"#FFDAD4",
             "bg":"#FEFBFF",
@@ -34,7 +36,8 @@ export const {
             "onBg700":"rgba(0,0,0,0.7)",
             "onBg800":"rgba(0,0,0,0.8)",
             "onBg900":"rgba(0,0,0,0.9)",
-            
+            "white500":"rgba(227,225,230,0.5)",
+            "white":"rgba(227,225,230,1)"
         },
         shadows:{
             "1dp":"0px 0px 2px 0px #00000024 , 0px 2px 2px 0px #0000001f , 0px 1px 3px 0px  #00000033" ,
@@ -53,6 +56,7 @@ export const {
         fontSizes:{
             "headline1":"36px",
             "headline2":"32px",
+            "headline3":"28px",
             "headline4":"24px",
             "headline5":"22px",
             "headline6":"18px",
@@ -66,6 +70,7 @@ export const {
         lineHeights:{
             "headline1":"44px",
             "headline2":"40px",
+            "headline3":"36px",
             "headline4":"32px",
             "headline5":"28px",
             "headline6":"24px",
@@ -90,6 +95,15 @@ export const {
             3:"24px",
             4:"32px", 
             5:"40px", 
+            "navSize":"252px"
+        },
+        radii:{
+            "50":"50%"
+        },
+        zIndices:{
+            "emergency":"101",
+            "top":"10",
+            "bottom":"0"
         }
  
 
@@ -125,6 +139,19 @@ export const {
          
          "headline2_i":(weight)=>({
             headline2:weight,
+            fontStyle:"italic"
+        }),
+
+        "headline3":(weight)=>({
+            fontFamily:"$barlow" ,
+            fontWeight:weight,
+            fontSize:"$headline3",
+            lineHeight:"$headline3",
+            fontStyle:"normal"
+         }),
+         
+         "headline3_i":(weight)=>({
+            headline3:weight,
             fontStyle:"italic"
         }),
 
@@ -244,22 +271,15 @@ export const {
         "linear-gradient":()=>({
             backgroundImage: "linear-gradient(189deg, rgba(62, 90, 169, 0.65) 11.54%, rgba(7, 77, 128, 0) 98.94%);opacity: 0.3"
         }),
-        "mesh1":()=>({
+        "meshType":(value)=>({
             "backgroundColor":"hsla(224,46%,45%,1)",
-            "backgroundImage": "radial-gradient(at 40% 20%, hsla(222,100%,15%,1) 0px, transparent 50%),radial-gradient(at 84% 0%, hsla(302,41%,12%,0.51) 0px, transparent 50%)"
+            "backgroundImage": value
         }) ,
-        "mesh2":()=>({
-            "backgroundColor":"hsla(224,46%,45%,1)" ,
-            "backgroundImage":"radial-gradient(at 36% 22%, hsla(309,40%,80%,0.34) 0px, transparent 50%),radial-gradient(at 64% 81%, hsla(215,65%,74%,0.47) 0px, transparent 50%),radial-gradient(at 72% 27%, hsla(222,100%,15%,1) 0px, transparent 50%),radial-gradient(at 54% 9%, hsla(351,93%,56%,0.19) 0px, transparent 50%),radial-gradient(at 14% 8%, hsla(216,64%,22%,1) 0px, transparent 50%),radial-gradient(at 67% 90%, hsla(302,41%,12%,0.51) 0px, transparent 50%)"
-        }),
-        "mesh3":()=>({
-            "backgroundColor":"hsla(224,46%,45%,1)" ,
-            "backgroundImage":"radial-gradient(at 16% 36%, hsla(309,43%,55%,0.34) 0px, transparent 50%),radial-gradient(at 93% 78%, hsla(215,50%,38%,0.52) 0px, transparent 50%),radial-gradient(at 17% 33%, hsla(222,100%,15%,1) 0px, transparent 50%),radial-gradient(at 20% 14%, hsla(351,93%,56%,0.19) 0px, transparent 50%),radial-gradient(at 14% 8%, hsla(216,64%,22%,1) 0px, transparent 50%),radial-gradient(at 92% 7%, hsla(302,23%,57%,0.51) 0px, transparent 50%)"
-        }),
-        "mesh4":()=>({
-            "backgroundColor":"hsla(224,46%,45%,1)",
-            "backgroundImage":"radial-gradient(at 53% 16%, hsla(309,39%,55%,0.54) 0px, transparent 50%),radial-gradient(at 93% 78%, hsla(215,100%,50%,0.72) 0px, transparent 50%),radial-gradient(at 42% 13%, hsla(222,100%,15%,1) 0px, transparent 50%),radial-gradient(at 11% 21%, hsla(351,69%,69%,0.36) 0px, transparent 50%),radial-gradient(at 26% 100%, hsla(216,86%,22%,1) 0px, transparent 50%),radial-gradient(at 65% 99%, hsla(302,23%,57%,0.51) 0px, transparent 50%)"
+        "imgResponsive":()=>({
+            width:"100%",
+            height:"auto"
         })
+
     }
 
 })
